@@ -1,0 +1,34 @@
+import pyautogui
+import time
+
+pyautogui.alert("O código vai começar. Não utilizar nada do computador até o código finalizar!")
+pyautogui.PAUSE = 0.5
+#abrir o google drive no meu computador
+pyautogui.press('winleft')
+pyautogui.write('chrome')
+pyautogui.press('enter')
+time.sleep(1)
+pyautogui.write('https://drive.google.com/drive/my-drive')
+pyautogui.press('enter')
+
+#entrar na minha área de trabalho
+pyautogui.hotkey('winleft', 'd')
+
+#clicar no arquivo que eu quero fazer o backup e arrastar ele
+pyautogui.moveTo(1862, 39)
+pyautogui.mouseDown()
+pyautogui.moveTo(914, 647)
+
+#mudar para o google drive
+pyautogui.hotkey('alt', 'tab')
+time.sleep(1)
+
+#largar o arquivo no google drive
+pyautogui.mouseUp()
+pyautogui.moveTo(1098, 680)
+pyautogui.click()
+
+#esperar 5 segundos
+time.sleep(5)
+
+pyautogui.alert("O código acabou de rodar. Pode usar o seu computador novamente")
